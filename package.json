@@ -1,12 +1,13 @@
 {
   "name": "proyecto_fetchdolar_v2_backend",
   "version": "1.0.0",
-  "description": "backend para el proyecto_fetchdolar_v2",
+  "description": "backend para el proyecto grafidolar",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.16.0"
   }
 }
