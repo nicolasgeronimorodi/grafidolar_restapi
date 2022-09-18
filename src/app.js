@@ -7,9 +7,7 @@ import job from './job/index.js';
 const options = { origin: ['http://localhost:4000', 'http://192.168.0.113:4000']}
 //Settings
 const app=express()
-cron.schedule('*/1 * * * *', ()=>{
-  console.log('running a task every minute')
-} )
+
 
 cron.schedule('0 10,12,14,16 * * MON,TUE,WED,THU,FRI', ()=>{
   job();
