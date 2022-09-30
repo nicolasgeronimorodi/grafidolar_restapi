@@ -9,7 +9,7 @@ const options = { origin: ['http://localhost:4000', 'http://192.168.0.113:4000']
 const app=express()
 
 
-cron.schedule('0 10,12,14,16 * * MON,TUE,WED,THU,FRI', ()=>{
+cron.schedule('25 10,12,14,21 * * MON,TUE,WED,THU,FRI', ()=>{
   job();
 }, {scheduled: true,
 timezone: "America/Argentina/Buenos_Aires"
