@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import { response } from 'express';
-
+import { RESTHOST } from '../config.js';
 export default  async function job()  {
 
 
@@ -33,7 +33,7 @@ function mapData(rsp) {
    
 } */
 async function postData (nombre, compra, venta){
-    await axios.post('http://localhost:3000/cotizaciones/add', {nombre, compra, venta})
+    await axios.post(RESTHOST+'/cotizaciones/add', {nombre, compra, venta})
           .then( function (response) { console.log(response +" response del post") } )
           .catch(function (error) { console.log(error)})
 
