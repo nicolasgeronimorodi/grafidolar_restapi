@@ -4,7 +4,7 @@ import morgan from 'morgan'
 import router from "./routes/api.routes.js"
 import * as cron from 'node-cron'
 import job from './job/index.js';
-const options = { origin: ['http://localhost:4000', 'http://192.168.0.113:4000']}
+const options = { origin: ['http://localhost:4000', 'http://192.168.0.113:4000', 'https://grafidolar-nicolasgeronimorodi-gmailcom.vercel.app', 'https://grafidolar.vercel.app' ]}
 //Settings
 const app=express()
 
