@@ -51,7 +51,7 @@ app.post("/cotizaciones/add", function(req, res, next) {
 })
 app.use(errorHandler)
 app.use(router) 
-
+app.use('/static', express.static('public'))
 
 //Routes
 
