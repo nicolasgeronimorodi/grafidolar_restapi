@@ -1,11 +1,12 @@
 
-import DolarPrecioxTipos from "../models/DolarPrecioxTipos.js";
+import Cotizaciones from "../models/Cotizaciones.js";
+//import DolarPrecioxTipos from "../models/DolarPrecioxTipos.js";
 
 
 export const renderCotizaciones=async(req, res)=>{
    
     try {
-    const cotizaciones=await DolarPrecioxTipos.find().lean();
+    const cotizaciones=await Cotizaciones.find().lean();
     res.json(cotizaciones)
    } catch (error) {
     console.log(error)
@@ -16,7 +17,7 @@ export const agregarCotizacion=async(req, res)=>{
     const {nombre, compra, venta}=req.body
     try{
         //Cotizaciones.add(0001, "202", "198",  )
-        const cotizacion=DolarPrecioxTipos({nombre, compra, venta})
+        const cotizacion=Cotizaciones({nombre, compra, venta})
         const saveCotizacion=await cotizacion.save()
         console.log(saveCotizacion)
     }

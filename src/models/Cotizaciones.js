@@ -20,4 +20,4 @@ versionKey: false
 }
 )
 
-export default model('Cotizaciones', cotizacionDolar)
+export default model('cotizaciones', cotizacionDolar)
