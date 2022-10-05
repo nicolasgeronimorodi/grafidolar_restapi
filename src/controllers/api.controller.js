@@ -1,6 +1,6 @@
 
 import Cotizaciones from "../models/Cotizaciones.js";
-//import DolarPrecioxTipos from "../models/DolarPrecioxTipos.js";
+
 
 
 export const renderCotizaciones=async(req, res)=>{
@@ -15,9 +15,10 @@ export const renderCotizaciones=async(req, res)=>{
 
 export const agregarCotizacion=async(req, res)=>{
     const {nombre, compra, venta}=req.body
+    const fecha=new Date().getTime()
     try{
         //Cotizaciones.add(0001, "202", "198",  )
-        const cotizacion=Cotizaciones({nombre, compra, venta})
+        const cotizacion=Cotizaciones({nombre, compra, venta, fecha})
         const saveCotizacion=await cotizacion.save()
         console.log(saveCotizacion)
     }
