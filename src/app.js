@@ -32,7 +32,9 @@ app.use(express.json())
 
 app.use(cors(options))
 
-
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
 
 app.post("/cotizaciones/add", function(req, res, next) { 
   
